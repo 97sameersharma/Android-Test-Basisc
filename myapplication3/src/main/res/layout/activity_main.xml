@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:background="#f7a210"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:text="USER DETAILS"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:inputType="text"
+            android:hint="enter your name"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:hint="enter contact no."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:hint="enter email id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:hint="enter your address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/dob"
+            android:hint="enter date of birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/college"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="enter your college name"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/course"
+            android:hint="enter course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/branch"
+            android:hint="enter branch (if any)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/sem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="enter semester"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:background="#f7a210"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:text="DETAILS"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>
