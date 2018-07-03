@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2b4360">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Create Account"
+            android:textAlignment="center"
+            android:textColor="#fffdfd"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/user" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#fffefe"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+          <ImageView
+              android:layout_marginLeft="3dp"
+              android:layout_marginTop="5dp"
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:src="@drawable/userlogin" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Your Name" />
+      </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/phone" />
+
+
+                <EditText
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:text="Phone no."/>
+            </LinearLayout>
+            <Button
+                android:layout_marginLeft="200dp"
+                android:background="#fffefe"
+                android:textAlignment="center"
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forget password ?"
+                android:textColor="#f59505"
+                android:textSize="10sp"/>
+
+
+            <Button
+                android:background="@drawable/round"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:id="@+id/button3"
+                android:textColor="#f9f7f7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIGN IN" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="121dp"
+        android:layout_height="107dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="#000"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/arrowbutton"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

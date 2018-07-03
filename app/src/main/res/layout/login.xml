@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/w3" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="W3lessons-Material Design SignUp Form"/>
+    </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+       android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="104dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Username"
+                android:layout_marginLeft="50dp" />
+        <EditText
+            android:layout_marginLeft="50dp"
+            android:id="@+id/editText4"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Email"
+            android:inputType="textEmailAddress" />
+
+            <EditText
+                android:layout_marginLeft="50dp"
+                android:id="@+id/editText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+               android:text="Password" />
+
+        <EditText
+
+            android:layout_marginLeft="50dp"
+            android:id="@+id/editText6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Re-type Password" />
+
+
+    <Button
+        android:background="@drawable/round"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:id="@+id/button3"
+        android:textColor="#f9f7f7"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="register now" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account ?"
+                    android:layout_gravity="right"
+                    android:textAlignment="textEnd"
+                    tools:ignore="RtlCompat,RtlHardcoded" />
+
+                <Button
+                  android:gravity="left"
+                    android:background="#fdfdfd"
+                    android:id="@+id/button2"
+                    android:textColor="#a4a6f1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" Login" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

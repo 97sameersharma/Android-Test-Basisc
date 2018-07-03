@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sameer Sharma"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="rishabh sharma"
+        android:gravity="left"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ishan kashyap"
+        android:gravity="right"/>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation ="horizontal">
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="kannu"
+            android:layout_weight="5"
+            android:gravity="center"
+        android:textColor="#d8ed15"/>
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="rishu"
+            android:textColor="#3c3e26"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ishu"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textColor="#154fed"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+</LinearLayout>
