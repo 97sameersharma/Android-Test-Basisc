@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginTop="20dp">
         <TextView
@@ -35,6 +35,14 @@
             android:layout_marginTop="10dp"/>
 
         <EditText
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="enter date of birth"
+            android:inputType="date" />
+
+        <EditText
             android:id="@+id/email"
             android:hint="enter email id"
             android:layout_width="match_parent"
@@ -44,25 +52,20 @@
 
         <EditText
             android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:hint="enter your address"
+            android:inputType="textPostalAddress" />
+
+
+
+        <Spinner
+            android:id="@+id/college_name_spinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPostalAddress"
-            android:layout_marginTop="10dp"/>
-        <EditText
-            android:id="@+id/dob"
-            android:hint="enter date of birth"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:layout_marginTop="10dp"/>
-        <EditText
-            android:id="@+id/college"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="enter your college name"
-            android:layout_marginTop="10dp"/>
+            android:layout_height="wrap_content" />
+
+
         <EditText
             android:id="@+id/course"
             android:hint="enter course"
@@ -96,11 +99,22 @@
             android:text="SUBMIT"
             android:layout_marginTop="10dp"/>
 
+
+        <Button
+            android:id="@+id/display"
+            android:background="#f7a210"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VIEW DETAILS"
+            android:layout_marginTop="10dp"/>
         <TextView
-            android:text="DETAILS"
+            android:text=""
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </LinearLayout>
 
 </ScrollView>
