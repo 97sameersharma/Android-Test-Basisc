@@ -31,7 +31,6 @@
             android:hint="enter contact no."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
             android:layout_marginTop="10dp"/>
 
         <EditText
@@ -39,8 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="enter date of birth"
-            android:inputType="date" />
+            android:hint="enter date of birth" />
 
         <EditText
             android:id="@+id/email"
@@ -85,7 +83,6 @@
             android:id="@+id/sem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
             android:hint="enter semester"
             android:layout_marginTop="10dp"/>
 

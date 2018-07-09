@@ -1,5 +1,7 @@
 package com.brillicaservices.myapplication3;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,11 +11,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Spinner;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
+    AlertDialog.Builder builder;
     ArrayList<Student> data=new ArrayList<>();
     EditText text1,text2,text3,text4,text5,text7,text8,text9;
     Button btn1,btn2;
@@ -38,6 +43,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         btn2 =(Button) findViewById(R.id.display);
         textView1 =(TextView) findViewById(R.id.textView);
 
+        builder = new AlertDialog.Builder(this);
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
         spinnerCollegeNames.setOnItemSelectedListener(this);
 
         ArrayAdapter arrayAdapter = new ArrayAdapter<>(this,
@@ -45,18 +57,75 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinnerCollegeNames.setAdapter(arrayAdapter);
         spinnerCollegeNames.setPrompt(collegeNames[0]);
 
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name=text1.getText().toString();
-                String phone=text2.getText().toString();
-                String email=text3.getText().toString();
-                String address=text4.getText().toString();
-                String dob=text5.getText().toString();
-                String course=text7.getText().toString();
-                String branch=text8.getText().toString();
-                String sem=text9.getText().toString();
-                data.add(new Student( name,phone,email,address,dob,collegeName,course,branch,sem));
+
+                builder.setMessage("check your name").setTitle("name error");
+
+//                        builder.setNegativeButton("OK)
+                AlertDialog dialog = builder.create();
+                dialog.show();
+
+                try {
+
+                    String name = text1.getText().toString();
+                    int phone = Integer.parseInt(text2.getText().toString());
+                    String email = text3.getText().toString();
+                    String address = text4.getText().toString();
+                    String dob = text5.getText().toString();
+                    String course = text7.getText().toString();
+                    String branch = text8.getText().toString();
+                    int sem =Integer.parseInt(text9.getText().toString());
+
+                    if((name.length()>2)&&(text2.length()==10)&&(email.length()>5)&&(address.length()>5)&&(dob.length()==10)&&(text9.length()==1)&&(course.length()>2)) {
+                        data.add(new Student(name, phone, email, address, dob, collegeName, course, branch, sem));
+                        Toast.makeText(getApplicationContext(), "Student data saved sucessfully", Toast.LENGTH_LONG).show();
+                    }
+
+
+                    else if(name.length()<3)
+                    {
+
+
+
+
+                    }
+                    else if(!(text2.length()==10))
+                    {
+
+                        Toast.makeText(getApplicationContext(),"phone number must be 10 digit number",Toast.LENGTH_LONG).show();
+                    }
+                    else if(email.length()<5)
+                    {
+                        Toast.makeText(getApplicationContext(),"email address must be 5 character long",Toast.LENGTH_LONG).show();
+
+                    }
+                    else if(address.length()<5)
+                    {
+                        Toast.makeText(getApplicationContext(),"address must be 5 character long",Toast.LENGTH_LONG).show();
+                    }
+                    else if(dob.length()<10)
+                    {
+                        AlertDialog.Builder builder2= new AlertDialog.Builder(getApplicationContext());
+                        final AlertDialog.Builder builder3=builder2.setMessage(" DOB will be in DD/MM/YYYY format ").setTitle("DOB Error");
+                    }
+                    else if (!(text9.length()==1))
+                    {
+                        Toast.makeText(getApplicationContext(),"semester must be 1 digit number",Toast.LENGTH_LONG).show();
+                    }
+
+                    }
+                    catch (NumberFormatException e)
+                    {
+
+                        Toast.makeText(getApplicationContext(), "Please check your values and enter a valid input",Toast.LENGTH_LONG).show();
+                    }
+                    catch (Exception e)
+                    {
+                        Toast.makeText(getApplicationContext(), "Please check your values, enter  a valid input", Toast.LENGTH_LONG).show();
+                    }
             }
         });
 
